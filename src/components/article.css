@@ -1,0 +1,60 @@
+.content-card {
+  position:relative;
+  max-width:90%;
+  background:white;
+  padding:1.5rem;
+  margin:auto;
+  margin-top:1rem;
+  margin-bottom:1rem;
+  border-radius:3px;
+  box-shadow:2px 2px 5px gray;
+}
+
+.card-category {
+  position:absolute;
+  right:0.4rem;
+  top:0.4rem;
+  display:inline-block;
+  padding:0.2rem 0.4rem;
+  border-radius:4px;
+  color:white;
+  font-size:0.7rem;
+}
+
+.musique-category {
+  background-color: rgba(185, 29, 66, 0.90);
+}
+
+.content-card__image {
+  display:block;
+  width:50%;
+  max-width:500px;
+  margin:auto;
+  margin-bottom:1rem;
+  margin-top:1rem;
+  border-radius:3px;
+  box-shadow: 1px 1px 1px;
+}
+
+.content-card__title {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.1rem;
+}
+
+.content-card__subtitle {
+  text-align: center;
+  color:grey;
+  font-style:italic;
+  margin-bottom:1rem;
+}
+
+.content-card__text {
+  text-align: justify;
+  font-weight: 200;
+}
+
+.content-card__text p {
+  margin-bottom:0.5rem;
+}

@@ -1,18 +1,26 @@
 import React from "react";
-import './Nav.css';
+import { BrowserRouter, Link } from "react-router-dom";
+import './nav.css';
 
 const Nav = () => {
+  async function getData (data) {
+    const response = await fetch('./data.json');
+    console.log(response);
+  }
+
   return (
-      <header class="main-header">
-        <a class="main-header__title" href="index.html">𝕦𝕟𝕕𝕖𝕣𝕔𝕦𝕣𝕣𝕖𝕟𝕥</a>
-        <nav class="desktop-nav">
-            <a href="./index.html" class="desktop-nav__item">Nouveautés</a>
-            <a class="desktop-nav__item">Sélection</a>
-            <div class="desktop-nav__item separator">|</div>
-            <a href="./musique/index.html" class="desktop-nav__item">Musique</a>
-            <a href="./jeux-video/index.html" class="desktop-nav__item">Jeux vidéo</a>
-            <a class="desktop-nav__item">Livres</a>
+      <header className="main-header">
+        <Link to="/" className="main-header__title">𝕦𝕟𝕕𝕖𝕣𝕔𝕦𝕣𝕣𝕖𝕟𝕥</Link>
+        <nav className="desktop-nav">
+            <Link className="desktop-nav__item">Nouveautés</Link>
+            <Link className="desktop-nav__item">Sélection</Link>
+            <div className="desktop-nav__item separator">|</div>
+            <Link to="/musique/" className="desktop-nav__item">Musique</Link>
+            <Link to="/jeuxvideo/" className="desktop-nav__item">Jeux vidéo</Link>
+            <Link to="/livres/" className="desktop-nav__item">Livres</Link>
         </nav>
+        
+        
     </header>
   )
 }
