@@ -25,6 +25,10 @@
   background-color: rgba(185, 29, 66, 0.90);
 }
 
+.jv-category {
+  background-color: rgba(41, 75, 103, 0.90);
+}
+
 .content-card__image {
   display:block;
   width:50%;
