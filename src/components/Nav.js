@@ -3,14 +3,9 @@ import { BrowserRouter, Link } from "react-router-dom";
 import './nav.css';
 
 const Nav = () => {
-  async function getData (data) {
-    const response = await fetch('./data.json');
-    console.log(response);
-  }
-
   return (
       <header className="main-header">
-        <Link to="/" className="main-header__title">𝕦𝕟𝕕𝕖𝕣𝕔𝕦𝕣𝕣𝕖𝕟𝕥</Link>
+        <Link to="/" className="main-header__title" >𝕦𝕟𝕕𝕖𝕣𝕔𝕦𝕣𝕣𝕖𝕟𝕥</Link>
         <nav className="desktop-nav">
             <Link className="desktop-nav__item">Nouveautés</Link>
             <Link className="desktop-nav__item">Sélection</Link>

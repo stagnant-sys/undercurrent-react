@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Article from "./components/Article";
+import database from "./database";
 
 const Musique = () => {
   const [articles, setArticles] = useState([
@@ -26,10 +27,10 @@ const Musique = () => {
     }
   ]);
 
-  const articlesList = articles.map((el) => 
-    <Article 
+  const articlesList = database.map((el) => 
+    <Article
+      key={el.id}
       category={el.category}
-      id={el.id}
       src={el.src}
       artist={el.artist}
       release={el.release}
