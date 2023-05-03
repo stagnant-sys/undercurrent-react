@@ -12,19 +12,31 @@ const Article = ({ category, id, src, artist, release, subtitle, content }) => {
     }
   };
 
+  const linesBreak = (content) => {
+    return content.split('\n');
+  }
+
+  const splitText = linesBreak(content);
+
+  const FormattedText = (id) => 
+  splitText.map((el, i) => 
+    <p key={id + i}>{el}</p>
+    );
 
   return (
     <div id={id} className="content-card">
       <CategoryBadge />
       <img className="content-card__image" src={src} />
       <div className="content-card__title">
-        {artist} - {release}
+        <div className="content-card__release-name">
+          {release} - {artist}
+        </div>
       </div>
       <div className="content-card__subtitle">
         {subtitle}
       </div>
       <div className="content-card__text">
-        <div>{content}</div>
+        <div><FormattedText /></div>
       </div>
     </div>
   )

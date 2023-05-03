@@ -8,6 +8,12 @@
   margin-bottom:1rem;
   border-radius:3px;
   box-shadow:2px 2px 5px gray;
+  display:grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 2rem 2rem auto;
+  grid-template-areas:"cover titre"
+                      "cover sous-titre"
+                      "cover texte"
 }
 
 .card-category {
@@ -31,13 +37,14 @@
 
 .content-card__image {
   display:block;
-  width:50%;
   max-width:500px;
   margin:auto;
   margin-bottom:1rem;
   margin-top:1rem;
   border-radius:3px;
   box-shadow: 1px 1px 1px;
+  grid-area: cover;
+  width:80%;
 }
 
 .content-card__title {
@@ -45,18 +52,22 @@
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 0.1rem;
+  grid-area: titre;
+  text-align: left;
 }
 
 .content-card__subtitle {
-  text-align: center;
   color:grey;
   font-style:italic;
   margin-bottom:1rem;
+  grid-area: sous-titre;
+  text-align: left;
 }
 
 .content-card__text {
   text-align: justify;
   font-weight: 200;
+  grid-area: texte;
 }
 
 .content-card__text p {
