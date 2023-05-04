@@ -3,7 +3,7 @@ import Article from "./components/Article";
 import database from "./database";
 
 const Musique = () => {
-  const musicData = database.filter(el => el.category === "musique");
+  const musicData = database.filter(el => el.category === "mus");
   const articlesList = musicData.map((el) => 
     <Article
       key={el.id}
@@ -13,6 +13,7 @@ const Musique = () => {
       release={el.release}
       subtitle={el.subtitle}
       content={el.content}
+      publication={el.published}
     />
     );
 

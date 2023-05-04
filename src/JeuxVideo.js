@@ -10,8 +10,10 @@ const JeuxVideo = () => {
       category={el.category}
       src={el.src}
       release={el.release}
+      artist={el.artist}
       subtitle={el.subtitle}
       content={el.content}
+      publication={el.published}
     />
     );
 

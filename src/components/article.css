@@ -10,10 +10,11 @@
   box-shadow:2px 2px 5px gray;
   display:grid;
   grid-template-columns: 1fr 3fr;
-  grid-template-rows: 2rem 2rem auto;
-  grid-template-areas:"cover titre"
-                      "cover sous-titre"
-                      "cover texte"
+  grid-template-rows: 2rem 2rem 2rem auto;
+  grid-template-areas:"art titre"
+                      "art artiste"
+                      "art sous-titre"
+                      "art texte"
 }
 
 .card-category {
@@ -27,12 +28,16 @@
   font-size:0.7rem;
 }
 
-.musique-category {
+.mus-category {
   background-color: rgba(185, 29, 66, 0.90);
 }
 
 .jv-category {
   background-color: rgba(41, 75, 103, 0.90);
+}
+
+.lit-category {
+  background-color: rgb(95, 110, 95, 0.90);
 }
 
 .content-card__image {
@@ -43,7 +48,7 @@
   margin-top:1rem;
   border-radius:3px;
   box-shadow: 1px 1px 1px;
-  grid-area: cover;
+  grid-area: art;
   width:80%;
 }
 
@@ -54,6 +59,10 @@
   margin-bottom: 0.1rem;
   grid-area: titre;
   text-align: left;
+}
+
+.content-card__artist {
+  grid-area: artiste;
 }
 
 .content-card__subtitle {
@@ -72,4 +81,10 @@
 
 .content-card__text p {
   margin-bottom:0.5rem;
+}
+
+.content-card__publication-date {
+  font-style: italic;
+  color: #888888;
+  font-size: 0.8rem;
 }
