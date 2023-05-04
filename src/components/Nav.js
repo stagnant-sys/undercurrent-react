@@ -7,7 +7,7 @@ const Nav = () => {
       <header className="main-header">
         <Link to="/" className="main-header__title" >𝕦𝕟𝕕𝕖𝕣𝕔𝕦𝕣𝕣𝕖𝕟𝕥</Link>
         <nav className="desktop-nav">
-            <Link className="desktop-nav__item">Nouveautés</Link>
+            <Link to="/new/" className="desktop-nav__item">Nouveautés</Link>
             <Link className="desktop-nav__item">Sélection</Link>
             <div className="desktop-nav__item separator">|</div>
             <Link to="/musique/" className="desktop-nav__item">Musique</Link>

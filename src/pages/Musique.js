@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Article from "./components/Article";
-import database from "./database";
+import Article from "../components/Article";
+import database from "../database";
 
 const Musique = () => {
   const musicData = database.filter(el => el.category === "mus");
