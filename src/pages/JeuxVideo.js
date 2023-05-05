@@ -19,6 +19,7 @@ const JeuxVideo = () => {
 
   return (
     <div>
+      <header class="header-category jeux-video">Jeux vidéo</header>
       {articlesList}
     </div>
   )

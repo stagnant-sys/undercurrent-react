@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Article from "../components/Article";
 import database from "../database";
+import "../index.css";
 
 const Musique = () => {
   const musicData = database.filter(el => el.category === "mus");
@@ -19,6 +20,7 @@ const Musique = () => {
 
   return (
     <div>
+      <header class="header-category">Musique</header>
       {articlesList}
     </div>
   )

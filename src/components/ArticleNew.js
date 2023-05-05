@@ -1,7 +1,8 @@
 import React from "react";
 import "./article.css";
+import "../index.css"
 
-const Article = ({ category, id, src, artist, release, subtitle, content, publication }) => {
+const ArticleNew = ({ category, id, src, artist, release, subtitle, content, publication }) => {
   const CategoryBadge = () => {
     if (category === "mus") {
       return <div className="card-category mus-category">musique</div>
@@ -24,7 +25,7 @@ const Article = ({ category, id, src, artist, release, subtitle, content, public
     );
 
   return (
-    <div id={id} className="content-card">
+    <div id={id} className="content-card__new">
       <CategoryBadge />
       <img className="content-card__image" alt="Artwork" src={src} />
       <div className="content-card__title">{release}</div>
@@ -40,4 +41,4 @@ const Article = ({ category, id, src, artist, release, subtitle, content, public
   )
 }
 
-export default Article;
+export default ArticleNew;

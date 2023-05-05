@@ -1,12 +1,14 @@
 import Article from "../components/Article";
+import ArticleNew from "../components/ArticleNew";
 import database from "../database";
+import "../index.css"
 
 const Nouveautés = () => {
   let data = database.slice();
   let dataList = data.sort((a, b) => (a.published < b.published) ? 1 : (a.published > b.published) ? -1 : 0);
 
   const articlesList = dataList.slice(0, 5).map((el) => 
-    <Article
+    <ArticleNew
       key={el.id}
       category={el.category}
       src={el.src}
@@ -20,8 +22,10 @@ const Nouveautés = () => {
 
   return (
     <div>
-      {articlesList}
-      <button onClick={console.log(dataList)}>Click</button>
+      <header class="header-category">Nouveautés</header>
+      <div className="new-container">
+        {articlesList}
+      </div>
     </div>
   )
 }

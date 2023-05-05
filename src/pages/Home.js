@@ -1,8 +1,12 @@
 import React from "react";
+import "../index.css"
 
 const Home = () => {
   return (
-    <h1>Welcome to undercurrent</h1>
+    <div>
+      <header class="header-category">Bienvenue sur undercurrent</header>
+    </div>
+
   )
 }
 
